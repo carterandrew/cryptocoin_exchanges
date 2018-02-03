@@ -5,7 +5,7 @@ import json
 import os
 import urllib
 
-from exchanges.exchange import Exchange
+from cryptocoin_exchanges.exchange import Exchange
 
 
 class GateIO(Exchange):
