@@ -7,8 +7,11 @@ from abc import ABCMeta
 class Exchange:
   __metaclass__ = ABCMeta
 
-  _NAME = None
+  _API_KEY = None
+  _API_SECRET = None
+  _API_URL = None
   _CREDENTIALS_PATH = None
+  _NAME = None
 
   def _loadCredentials(self):
     """Loads API credentials from a json file.
@@ -28,6 +31,11 @@ class Exchange:
   def credentialsPath(self):
     return self._CREDENTIALS_PATH
 
+  # Generally-public methods
+  def getPairs(self):
+    raise NotImplementedError()
+
+  # Authenticated Methods
   def getBalances(self, pair=None):
     raise NotImplementedError()
 
