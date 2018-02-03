@@ -10,10 +10,10 @@ from exchanges.exchange import Exchange
 
 class GateIO(Exchange):
 
-  _NAME = 'Gate.io'
+  _API_URL = 'data.gate.io'
   _CREDENTIALS_PATH = os.path.join(
       os.path.expanduser('~'), 'credentials', 'gateio.json')
-  _API_URL = 'data.gate.io'
+  _NAME = 'Gate.io'
 
   def __init__(self):
     super(GateIO, self).__init__()
